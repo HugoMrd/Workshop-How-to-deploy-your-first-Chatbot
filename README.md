@@ -1,4 +1,4 @@
-# **Workshop - "Créer un chatbot en Python : Techniques de traitement de langage naturel et d'apprentissage automatique**
+# **Workshop - Créer un chatbot en Python**
 
 Durant ce Workshop, vous allez apprendre à créer un chatbot en utilisant des techniques de traitement de langage naturel et d'apprentissage automatique en Python. Vous commencerez par découvrir les bibliothèques Python de traitement de langage naturel, telles que NLTK et Spacy, pour comprendre comment les modèles de langage fonctionnent.
 
