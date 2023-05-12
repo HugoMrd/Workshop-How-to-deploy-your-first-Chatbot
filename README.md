@@ -18,11 +18,12 @@ Aujourd'hui, avant de commencer les exercices il vous faudra télécharger certa
 - pip install textblob
 - pip install spacy
 - python -m spacy download en_core_web_sm
+- pip install openai
 
 ## **Comment faire ?**
 Vous trouverez chaque exercice dans les fichiers nommé (ex1/exercice1, ex2/exercice2...).
 
-## **STEP 1: Créer une page de destination responsive**
+## **STEP 1: Un premier Chatbot en fonction de votre humeur**
 Le but de l'exercice est de completer le code afin d'obtenir votre premier bot avec certaines réponses plutot simple, mais qui peuvent parfois dépendre en fonction de l'humeur avec laquelle vous parlerez au bot. Pour cela vous devrez comprendre à quoi correspond la variable 'polarity' et la manipuler pour pouvoir obtenir des réponses en fonction d'elle...
 ![ex1](ex1/ex1_screen.png)
 
