@@ -8,6 +8,7 @@ nlp = spacy.load("en_core_web_sm")
 name = None
 should_exit = False
 
+
 # Liste de réponses possibles
 responses = {
     "en": {
@@ -24,27 +25,38 @@ responses = {
 def respond(user_input, name):
     # Détecter le nom de l'utilisateur
     doc = nlp(user_input)
+    # Détecter la polarité et la subjectivité du texte de l'utilisateur
+    blob = TextBlob(user_input)
+    polarity = blob.sentiment.polarity
+    subjectivity = blob.sentiment.subjectivity
     # Choisir une réponse appropriée en fonction de l'entrée utilisateur
     if "hello" in user_input.lower():
         response = random.choice(responses["en"]["hello"]).format(name)
-   
+    elif "how are you" in user_input.lower():
+        response = random.choice(responses["en"]["how are you"])
+    elif "goodbye" in user_input.lower():
+        response = random.choice(responses["en"]["goodbye"]).format(name)
+        print("Bot:", response)
+        return True  # Set the flag to exit the loop
+    elif "what's your name" in user_input.lower():
+        response = random.choice(responses["en"]["what's your name"])
+    elif "tell me a joke" in user_input.lower():
+        response = random.choice(responses["en"]["tell me a joke"])
+    elif "tell me a dad joke" in user_input.lower():
+        response = random.choice(responses["en"]["tell me a dad joke"])
     #############
     #À completer#
     #############
-   
-    else:
-        response = "Ask me anything!"
     print("Bot:", response)
     return False  # Continue the loop
 
 # Boucle principale pour le chatbot
 while True:
-    if name is None:
-        print("Bot: Hello, what's your name?")
+    if (name == None):
+        print("Bot: Hello, what's your name ?")
         name = input("You: ")
-        print("Bot: Nice to meet you,", name + "!")
+        print("Bot: Nice to meet you", name)
     else:
         user_input = input("You: ")
-        should_exit = respond(user_input, name)
-        if should_exit:
-            break
+        bot_response = respond(user_input, name)
+        print("Bot:", bot_response)

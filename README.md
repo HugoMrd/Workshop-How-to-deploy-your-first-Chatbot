@@ -14,16 +14,40 @@ Enfin, vous finirez par apprendre comment personnaliser vos chatbot en utilisant
 
 Aujourd'hui, avant de commencer les exercices il vous faudra télécharger certaines choses pour pouvoir programmer vos bots...
 
-- sudo dnf install python3-pip
-- pip install textblob
-- pip install spacy
-- python -m spacy download en_core_web_sm
-- pip install openai
+## Installation de python3-pip :
+
+Fedora : 
+```
+sudo dnf install python3-pip
+```
+
+Ubuntu :
+```
+sudo apt install python3-pip
+```
+
+## Installation des librairies avec pip :
+
+```
+pip install textblob
+pip install spacy
+python3 -m spacy download en_core_web_sm
+```
 
 ## **Comment faire ?**
 Vous trouverez chaque exercice dans les fichiers nommé (ex1/exercice1, ex2/exercice2...).
 
-## **STEP 1: Un premier Chatbot en fonction de votre humeur**
-Le but de l'exercice est de completer le code afin d'obtenir votre premier bot avec certaines réponses plutot simple, mais qui peuvent parfois dépendre en fonction de l'humeur avec laquelle vous parlerez au bot. Pour cela vous devrez comprendre à quoi correspond la variable 'polarity' et la manipuler pour pouvoir obtenir des réponses en fonction d'elle...
+## **STEP 1: Un premier Chatbot avec des réponses prédéfinies**
+La première étape de ce workshop est de créer un chatbot qui répondra à des questions prédéfinies comme "Bonjour", "Comment vas-tu ?" ou encore "Quel est ton nom ?".
+
+Vous allez pour cela compléter le code qui vous a été fourni, n'hésitez pas à ajouter des questions et des réponses pour que votre bot soit plus complet ! Faites preuve d'imagination !
+
 ![ex1](ex1/ex1_screen.png)
 
+
+
+
+
+## **STEP 2: Un premier Chatbot en fonction de votre humeur**
+Le but de l'exercice est de completer le code afin d'obtenir votre premier bot avec certaines réponses plutot simple, mais qui peuvent parfois dépendre en fonction de l'humeur avec laquelle vous parlerez au bot. Pour cela vous devrez comprendre à quoi correspond la variable 'polarity' et la manipuler pour pouvoir obtenir des réponses en fonction d'elle...
+![ex2](ex2/ex2_screen.png)
