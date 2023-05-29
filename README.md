@@ -52,7 +52,7 @@ Vous allez pour cela compléter le code qui vous a été fourni, n'hésitez pas 
 Le but de l'exercice est de completer le code afin d'obtenir votre premier bot avec certaines réponses plutot simple, mais qui peuvent parfois dépendre en fonction de l'humeur avec laquelle vous parlerez au bot. Pour cela vous devrez comprendre à quoi correspond la variable 'polarity' et la manipuler pour pouvoir obtenir des réponses en fonction d'elle...
 ![ex2](ex2/ex2_screen.png)
 
-## **STEP 3: Un Chatbot en fonction de votre humeur, plus performmant, grâce aux dictionnaires**
+## **STEP 3: Un Chatbot en fonction de votre humeur, plus performant, grâce aux dictionnaires**
 
 Le but de l'exercice est encore une fois de compléter le code grâce à l'exercice deux, en incorporant cette fois-ci un dictionnaire qui fera varier la variable 'polarity', ce qui permettra donc de faire changer l'humeur de vos réponses avec juste un mot défini dans le dictionnaire.
 ![ex3](ex3/ex3_screen.png)
