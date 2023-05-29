@@ -1,0 +1,57 @@
+#!/usr/bin/env python3
+
+import spacy
+from textblob import TextBlob
+import random
+
+nlp = spacy.load("en_core_web_sm")
+name = None
+
+# Liste de réponses possibles
+responses = {
+    "en": {
+        "hello": ["Hello, {}!", "Hi there, {}!", "Nice to meet you, {}!"],
+        "how are you": ["I'm doing well, thank you.", "Pretty good, thanks for asking.", "Not too bad, how about you?"],
+        "goodbye": ["Goodbye, {}!", "See you later, {}!", "Until next time, {}!"]
+    }
+}
+
+# Dictionnaire pour analyser les mots de l'utilisateur et changer la polarité
+###############
+# À complérer #
+###############
+
+# Fonction pour répondre à l'utilisateur
+def respond(user_input, name):
+    # Détecter le nom de l'utilisateur
+    doc = nlp(user_input)
+    # Détecter la polarité et la subjectivité du texte de l'utilisateur
+    blob = TextBlob(user_input)
+    polarity = blob.sentiment.polarity
+    subjectivity = blob.sentiment.subjectivity
+    # Analyser les mots de l'utilisateur pour changer la polarité
+    for token in doc:
+        if token.text.lower() in polarity_dict:
+            polarity += polarity_dict[token.text.lower()]
+    # Choisir une réponse appropriée en fonction de l'entrée utilisateur et de la polarité
+    if "hello" in user_input.lower():
+        response = random.choice(responses["en"]["hello"]).format(name)
+    elif "how are you" in user_input.lower():
+        response = random.choice(responses["en"]["how are you"])
+    elif "goodbye" in user_input.lower():
+        response = random.choice(responses["en"]["goodbye"]).format(name)
+    ###############
+    # À complérer #
+    ###############
+    return response
+
+# Boucle principale pour le chatbot
+while True:
+    if name is None:
+        print("Bot: Hello, what's your name?")
+        name = input("You: ")
+        print("Bot: Nice to meet you,", name)
+    else:
+        user_input = input("You: ")
+        bot_response = respond(user_input, name)
+        print("Bot:", bot_response)
