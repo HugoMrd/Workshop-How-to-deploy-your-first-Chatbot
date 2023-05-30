@@ -1,0 +1,78 @@
+#!/usr/bin/env python3
+
+import spacy
+from textblob import TextBlob
+import random
+
+nlp = spacy.load("en_core_web_sm")
+name = None
+
+# Liste de réponses possibles
+responses = {
+    "en": {
+        "hello": ["Hello, {}!", "Hi there, {}!", "Nice to meet you, {}!"],
+        "how are you": ["I'm doing well, thank you.", "Pretty good, thanks for asking.", "Not too bad, how about you?"],
+        "goodbye": ["Goodbye, {}!", "See you later, {}!", "Until next time, {}!"]
+    }
+}
+
+
+# Dictionnaire pour stocker les réponses personnalisées
+###############
+# À COMPLÉTER #
+###############
+
+# Fonction pour répondre à l'utilisateur
+def respond(user_input, name):
+    # Détecter le nom de l'utilisateur
+    doc = nlp(user_input)
+    # Détecter la polarité et la subjectivité du texte de l'utilisateur
+    blob = TextBlob(user_input)
+    polarity = blob.sentiment.polarity
+    subjectivity = blob.sentiment.subjectivity
+    # Chercher une réponse dans les réponses personnalisées
+    ###############
+    # À COMPLETER #
+    #if .....
+    ###############
+    # Choisir une réponse appropriée en fonction de l'entrée utilisateur et de la polarité
+    elif "hello" in user_input.lower():
+        response = random.choice(responses["en"]["hello"]).format(name)
+    elif "how are you" in user_input.lower():
+        response = random.choice(responses["en"]["how are you"])
+    elif "goodbye" in user_input.lower():
+        response = random.choice(responses["en"]["goodbye"]).format(name)
+    elif polarity < -0.5:
+        response = "I'm sorry, it sounds like you're feeling really down right now. Is there anything I can do to help?"
+    elif polarity < 0:
+        response = "It seems like you're feeling a bit negative. Is there anything you'd like to talk about?"
+    elif polarity < 0.5:
+        response = "I sense a positive tone in your message! That's great to hear. Is there anything in particular that's making you feel good?"
+    elif polarity < -0.7:
+        response = "I'm sorry to hear that you're feeling extremely negative. Can I offer any assistance or support?"
+    elif polarity > 0.7:
+        response = "You seem to be extremely positive! That's fantastic! Is there something specific that's making you feel so great?"
+    else:
+        response = "Wow, you're really feeling happy today! I'm glad to hear it. Is there anything you'd like to share with me?"
+    return response
+
+# Fonction pour apprendre une réponse personnalisée
+###############
+# À COMPLÉTER #
+###############
+
+# Boucle principale pour le chatbot
+while True:
+    if name is None:
+        print("Bot: Hello, what's your name?")
+        name = input("You: ")
+        print("Bot: Nice to meet you,", name)
+    else:
+        user_input = input("You: ")
+        bot_response = respond(user_input, name)
+        print("Bot:", bot_response)
+        if user_input.lower() not in custom_responses and bot_response != "I'm sorry, it sounds like you're feeling really down right now. Is there anything I can do to help?" and bot_response != "It seems like you're feeling a bit negative. Is there anything you'd like to talk about?":
+            print("Bot: I'm sorry, I don't have a pre-defined response for that. Could you please provide a custom response?")
+            custom_response = input("You: ")
+            learn_response(user_input, custom_response)
+            print("Bot: Got it! I will remember that response.")

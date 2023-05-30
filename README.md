@@ -38,21 +38,27 @@ python3 -m spacy download en_core_web_sm
 Vous trouverez chaque exercice dans les fichiers nommé (ex1/exercice1, ex2/exercice2...).
 
 ## **STEP 1: Un premier Chatbot avec des réponses prédéfinies**
+
 La première étape de ce workshop est de créer un chatbot qui répondra à des questions prédéfinies comme "Bonjour", "Comment vas-tu ?" ou encore "Quel est ton nom ?".
 
 Vous allez pour cela compléter le code qui vous a été fourni, n'hésitez pas à ajouter des questions et des réponses pour que votre bot soit plus complet ! Faites preuve d'imagination !
 
 ![ex1](ex1/ex1_screen.png)
 
-
-
-
-
 ## **STEP 2: Un premier Chatbot en fonction de votre humeur**
+
 Le but de l'exercice est de completer le code afin d'obtenir votre premier bot avec certaines réponses plutot simple, mais qui peuvent parfois dépendre en fonction de l'humeur avec laquelle vous parlerez au bot. Pour cela vous devrez comprendre à quoi correspond la variable 'polarity' et la manipuler pour pouvoir obtenir des réponses en fonction d'elle...
+
 ![ex2](ex2/ex2_screen.png)
 
 ## **STEP 3: Un Chatbot en fonction de votre humeur, plus performant, grâce aux dictionnaires**
 
 Le but de l'exercice est encore une fois de compléter le code grâce à l'exercice deux, en incorporant cette fois-ci un dictionnaire qui fera varier la variable 'polarity', ce qui permettra donc de faire changer l'humeur de vos réponses avec juste un mot défini dans le dictionnaire.
+
 ![ex3](ex3/ex3_screen.png)
+
+## **STEP 4: Un chatbot qui apprend en fonction de vos réponses**
+
+Pour finir ce workshop vous aller programmer un bot en complétant une fois de plus le code fournis, qui apprendra de vos réponses si il ne sait pas y répondre. Ce qui plus communément assimilé à du machine learning. À vous de jouer !
+
+![ex4](ex4/ex4_screen.png)
