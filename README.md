@@ -62,3 +62,8 @@ Le but de l'exercice est encore une fois de compléter le code grâce à l'exerc
 Pour finir ce workshop vous aller programmer un bot en complétant une fois de plus le code fourni, qui apprendra de vos réponses s'il ne sait pas y répondre. Ce qui plus communément assimilé à du machine learning. À vous de jouer !
 
 ![ex4](ex4/ex4_screen.png)
+
+## **BONUS**
+Merci d'avoir suivi ce Workshop vous avez maintenant de très bonnes bases pour faire votre propre Chatbot. Il faut savoir qu'il est également possible si vous possédez une clé API OpenAi de faire un chatbot sur la même base que ChatGPT, donc un très bon bot, vous avez donc un exercice bonus juste ici pour ceux qui possède une clé API OpenAI
+
+![ex5](ex_bonus/ex5_screen.png)
