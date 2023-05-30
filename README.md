@@ -59,6 +59,6 @@ Le but de l'exercice est encore une fois de compléter le code grâce à l'exerc
 
 ## **STEP 4: Un chatbot qui apprend en fonction de vos réponses**
 
-Pour finir ce workshop vous aller programmer un bot en complétant une fois de plus le code fournis, qui apprendra de vos réponses si il ne sait pas y répondre. Ce qui plus communément assimilé à du machine learning. À vous de jouer !
+Pour finir ce workshop vous aller programmer un bot en complétant une fois de plus le code fourni, qui apprendra de vos réponses s'il ne sait pas y répondre. Ce qui plus communément assimilé à du machine learning. À vous de jouer !
 
 ![ex4](ex4/ex4_screen.png)
